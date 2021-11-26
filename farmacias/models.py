@@ -4,10 +4,10 @@ from django.db import models
 class Farmacia(models.Model):
 
     fecha = models.CharField(max_length=255)
-    local_id = models.IntegerField()
+    local_id = models.CharField(max_length=255)
     local_nombre = models.CharField(max_length=255)
     comuna_nombre = models.CharField(max_length=255)
-    fk_localidad = models.IntegerField()
+    fk_localidad = models.CharField(max_length=255)
     localidad_nombre = models.CharField(max_length=255)
     local_direccion = models.CharField(max_length=255)
     funcionamiento_hora_apertura = models.CharField(max_length=255)
