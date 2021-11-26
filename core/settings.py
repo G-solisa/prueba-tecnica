@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # #restframework
+    'rest_framework',
+    #apps
+    'farmacias',
+    
 ]
 
 MIDDLEWARE = [
@@ -123,3 +128,9 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#date format
+# DATE_INPUT_FORMATS = ['%d-%m-%Y']
+#DATETIME_FORMAT = '%d-%m-%Y %H:%i:%s'
+DATE_FORMATS = ['%d-%m-%Y', '%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y',]
+DATE_INPUT_FORMAT = ' j N, y'
