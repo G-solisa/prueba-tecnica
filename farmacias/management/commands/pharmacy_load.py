@@ -7,7 +7,7 @@ url = 'https://farmanet.minsal.cl/maps/index.php/ws/getLocalesTurnos'
 
 
 class Command(BaseCommand):
-    
+
     def add_arguments(self, parser):
         parser.add_argument('email')
 
@@ -17,8 +17,8 @@ class Command(BaseCommand):
         response = requests.get(url)
 
         if response.status_code == 200:
-            j_data = response.json() #list of dics ??
-            # clean_j_data = {json.loads(j_data[0])}
+            j_data = response.json()
+
             for x in j_data:
                 Farmacia.objects.update_or_create(**x)
 
