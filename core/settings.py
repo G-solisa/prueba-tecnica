@@ -129,8 +129,8 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#date format
-DATE_INPUT_FORMATS = ['%d-%m-%Y']
-DATETIME_FORMAT = '%d-%m-%Y %H:%i:%s'
-DATE_FORMATS = ['%d-%m-%Y', '%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y',]
-DATE_INPUT_FORMAT = ' j N, y'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'me@gmail.com'
+EMAIL_HOST_PASSWORD = 'password'
